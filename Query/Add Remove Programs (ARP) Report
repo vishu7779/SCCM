@@ -1,0 +1,13 @@
+Select
+distinct
+v_R_System.Name0,
+v_Add_Remove_Programs.DisplayName0,
+v_Add_Remove_Programs.Version0,
+v_Add_Remove_Programs.ProdID0,
+v_R_System.Operating_System_Name_and0
+from v_R_System
+join v_Add_Remove_Programs on
+v_R_System.ResourceID = v_Add_Remove_Programs.ResourceID
+where
+v_Add_Remove_Programs.DisplayName0 like '%xpress password%'
+order by 1 
