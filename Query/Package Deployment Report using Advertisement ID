@@ -1,0 +1,7 @@
+select v_R_System.Name0, v_R_System.User_Name0,v_AdvertisementInfo.AdvertisementName, 
+v_AdvertisementInfo.AdvertisementID,v_ClientAdvertisementStatus.LastStatusMessageIDName, 
+v_ClientAdvertisementStatus.LastStateName 
+from v_R_System 
+join v_ClientAdvertisementStatus on v_R_System.ResourceID=v_ClientAdvertisementStatus.ResourceID 
+join v_AdvertisementInfo on v_ClientAdvertisementStatus.AdvertisementID=v_AdvertisementInfo.AdvertisementID 
+where v_ClientAdvertisementStatus.AdvertisementID='XXXXXXX'
