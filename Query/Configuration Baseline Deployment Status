@@ -1,0 +1,5 @@
+select distinct VRS.Netbios_Name0, CI.ComplianceStateName from v_R_System VRS
+right join v_FullCollectionMembership_Valid FM on VRS.ResourceID=FM.ResourceID
+right join fn_ListCI_ComplianceState(1033) CI on VRS.ResourceID=CI.ResourceID
+where CI.CI_ID='18663607' --Specify CI ID
+and FM.CollectionID='ATS00A46' --Specify Collection ID
