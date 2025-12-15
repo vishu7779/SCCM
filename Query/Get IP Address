@@ -1,0 +1,5 @@
+Select distinct v_R_System.Name0,
+v_GS_NETWORK_ADAPTER_CONFIGUR.IPAddress0
+from v_R_System
+join v_GS_NETWORK_ADAPTER_CONFIGUR on v_R_System.ResourceID = v_GS_NETWORK_ADAPTER_CONFIGUR.ResourceID
+where v_GS_NETWORK_ADAPTER_CONFIGUR.IPAddress0 is not null
